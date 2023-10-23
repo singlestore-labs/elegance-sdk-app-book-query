@@ -35,7 +35,7 @@ export function QueryInput({ bookTableName, onSubmit, ...props }: QueryInputProp
         type="text"
         placeholder="What would you like to ask about the book?"
         onChange={event => setValue(event.target.value)}
-        className="w-full border rounded-md px-6 py-4 text-lg outline-none hover:border-neutral-300  focus:border-black disabled:bg-neutral-100"
+        className="w-full border rounded-md px-6 py-4 text-lg outline-none hover:border-neutral-300 focus:border-black disabled:bg-neutral-100"
         autoFocus
         disabled={chatCompletion.isLoading}
       />

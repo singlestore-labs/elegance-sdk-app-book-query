@@ -11,8 +11,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="relative flex min-h-screen w-full max-w-full flex-col overflow-y-auto overflow-x-hidden p-8">
-      <h1 className="text-2xl font-medium mx-auto">{metadata.title?.toString()}</h1>
-      <BookQuery />
+      <div className="border rounded-lg w-full max-w-3xl h-[48rem] overflow-y-auto overflow-x-hidden m-auto flex flex-col p-8">
+        <h1 className="text-2xl font-medium mx-auto pb-8 border-b w-full max-w-full text-center mb-8">
+          {metadata.title?.toString()}
+        </h1>
+        <BookQuery />
+      </div>
     </main>
   );
 }

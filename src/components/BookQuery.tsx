@@ -5,7 +5,7 @@ import { BookUploader } from "./BookUploader";
 import { QueryInput } from "./QueryInput";
 
 export function BookQuery({ ...props }: JSX.IntrinsicElements["div"]) {
-  const [bookTableName, setBookTableName] = useState("");
+  const [bookTableName, setBookTableName] = useState("123");
   const [completion, setCompletion] = useState("");
 
   let render;
@@ -32,7 +32,7 @@ export function BookQuery({ ...props }: JSX.IntrinsicElements["div"]) {
   }
 
   return (
-    <div {...props} className="flex flex-1 flex-col items-center justify-center w-full max-w-xl mx-auto">
+    <div {...props} className="flex flex-1 flex-col items-center justify-center w-full mx-auto">
       {render}
     </div>
   );
