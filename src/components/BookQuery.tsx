@@ -5,7 +5,7 @@ import { BookUploader } from "./BookUploader";
 import { QueryInput } from "./QueryInput";
 
 export function BookQuery({ ...props }: JSX.IntrinsicElements["div"]) {
-  const [bookTableName, setBookTableName] = useState("123");
+  const [bookTableName, setBookTableName] = useState("");
   const [completion, setCompletion] = useState("");
 
   let render;
