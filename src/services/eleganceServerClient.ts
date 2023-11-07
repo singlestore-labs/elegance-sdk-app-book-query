@@ -7,7 +7,9 @@ export const eleganceServerClient = createEleganceServerClient("mysql", {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
   },
-  openai: {
-    apiKey: process.env.OPENAI_API_KEY
+  ai: {
+    openai: {
+      apiKey: process.env.OPENAI_API_KEY
+    }
   }
 });

@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@singlestore/elegance-sdk": "^0.0.2",
+    "@singlestore/elegance-sdk": "^0.0.9",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

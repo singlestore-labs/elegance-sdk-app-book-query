@@ -23,15 +23,7 @@ export function BookUploader({ onUpload, ...props }: BookUploaderProps) {
         reader.onload = async event => {
           if (event.target?.result) {
             const dataURL = event.target.result as string;
-            const table = `books_chat_mysql.${file.name.split(".")[0].replace(/\W/g, "_")}`;
-
-            await query.execute({
-              query: `CREATE TABLE ${table} (
-                    text TEXT,
-                    embedding LONGBLOB NOT NULL
-                  )`
-            });
-
+            const table = file.name.split(".")[0].replace(/\W/g, "_");
             await createAndInsertBookEmbeddings.execute({ table, dataURL });
             onUpload(table);
             resolve(true);
